@@ -15,16 +15,22 @@ int main() {
     printf("  ");
     
     //Posiciona navio
-    //Navio 1 - Horizontal
+    //Navio 1 - Cone
 
-    tabuleiro[9][3] = 3;
-    tabuleiro[9][4] = 3;
-    tabuleiro[9][5] = 3;
+    // tabuleiro[0][2] = 3;
+    // tabuleiro[1][1] = 3;
+    // tabuleiro[1][2] = 3;
+    // tabuleiro[1][3] = 3;
+    // tabuleiro[2][0] = 3;
+    // tabuleiro[2][1] = 3;
+    // tabuleiro[2][2] = 3;
+    // tabuleiro[2][3] = 3;
+    // tabuleiro[2][4] = 3;
 
-    //Navio 2 - Vertical
-    tabuleiro[5][7] = 3;
-    tabuleiro[6][7] = 3;
-    tabuleiro[7][7] = 3;
+    //Navio 2 - Cruz
+    // tabuleiro[5][7] = 3;
+    // tabuleiro[6][7] = 3;
+    // tabuleiro[7][7] = 3;
 
 
     //Printa colunas
@@ -39,24 +45,33 @@ int main() {
 
         for(int k=0; k<10; k++){
 
-            // Aqui para posicionar na diagonal principal fazemos um loop que percorre as linhas e colunas simultaneamente e atribui o valor 3 (representando um navio) às posições correspondentes no tabuleiro.
-            // exemplo tabuleiro[0][0], tabuleiro[1][1], tabuleiro[2][2], etc.
-
-            if(linha[j] == k ){
+            // Cone
+            if(j == 0 and k == 2 ){
                 for(int n=0; n<3; n++){
-                    tabuleiro[n][n+k] = 3;
-            }}
+                    tabuleiro[j][k] = 3;
+                    tabuleiro[j+1][k-n+1] = 3;
+                    for (int m=0; m<5; m++){
+                        tabuleiro[j+2][m-j] = 3;
+                    }
+                }   
+            }
+            // Cruz
+            if(j == 5 and k == 3 ){
+                for(int n=0; n<5; n++){
+                    tabuleiro[j][k] = 3;
+                    tabuleiro[j+1][j+n-4] = 3;
+                    tabuleiro[j+2][k] = 3;
+                }   
+            }
 
-            
-            // Aqui é o inverso da diagonal principal, ou seja, da direita para a esquerda.
-            // exemplo tabuleiro[2][7], tabuleiro[3][6], tabuleiro[4][5], etc.
-            // Como são 9 colunas, começamos a partir da coluna 9 e subtraímos o índice da linha para obter a coluna correta e atribuir o valor 3 (representando um navio) às posições correspondentes no tabuleiro.
-            
-            if(linha[j] == k ){
-                for(int n=2; n<5; n++){
-                    tabuleiro[n][9-n] = 3;
-            }}
-
+            // Octaedro
+            if (j == 2 and k == 7){
+                for (int n=0; n<3; n++){
+                    tabuleiro[j+n][k] = 5;
+                    tabuleiro[j+1][k+n-1] = 5;
+                }
+            }
+        
             
             
             printf(" %d",tabuleiro[j][k]);
