@@ -37,22 +37,22 @@ O objetivo principal é simular um jogo de Batalha Naval utilizando matrizes bid
 ## 📸 Exemplos de Saída
 
 ### Cone
-0 0 1 0 0 
-0 1 1 1 0 
-1 1 1 1 1
+0 0 1 0 0   
+0 1 1 1 0  
+1 1 1 1 1  
 
 
 ### Octaedro
-0 0 1 0 0 
-0 1 1 1 0
-0 0 1 0 0
+0 0 1 0 0  
+0 1 1 1 0  
+0 0 1 0 0  
 
 
 
 ### Cruz
-0 0 1 0 0 
-1 1 1 1 1
-0 0 1 0 0
+0 0 1 0 0   
+1 1 1 1 1  
+0 0 1 0 0  
 
 
 ---
@@ -80,7 +80,7 @@ O objetivo principal é simular um jogo de Batalha Naval utilizando matrizes bid
 
 ## 👨‍🎓 Autor
 
-Desenvolvido por **Lucas**, estudante de [sua faculdade].  
+Desenvolvido por **Lucas Marques**
 Desafio proposto pela equipe de ensino da **MateCheck**.
 
 ---
